@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_1.css">
+    <style>
+     body{
+    margin: 0;
+    padding: 0;
+    animation: gradient 10s infinite;
+}
+@keyframes gradient {
+    
+    0%{
+        background-color: white;
+    }
+    25%{
+        background-color: wheat;
+    }
+    50%{
+        background-color: rgb(253, 215, 215);
+    }
+   0%, 100%{
+    background-color:white;
+   }
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box{
+    width: 400px;
+    height: 500px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.text{
+    border: 0;
+    border-bottom: 2px solid ;
+    width: 400px;
+    height: 90px;
+    background-color: transparent;
+    font-size: xx-large;
+    width: 90%;
+
+}
+.text:focus{
+    outline: none;
+}
+
+.form{
+    text-align: center;
+}
+
+.row_1{
+    background-color: transparent;
+    padding: 19px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: larger;
+   }
+
+  
+	 
+    </style>
+</head>
+<body>
+    <div class="container">
+           <div class="box">
+           <form class="form">
+ 
+              <tr>
+                <input  type="text" class="text" name="screen" >
+              </tr>
+              <tr >
+                <input type="reset" value="AC" class="row_1" onclick="screen.value += value">
+                <input type="button" style="padding-inline: 14px; margin-inline: 14px;" value="DEL" class="row_1" onclick="screen.value = screen.value.toString().slice(0, -1)">
+                <input type="button" value="/" class="row_1" onclick="screen.value += value">
+                <input type="button" value="=" class="row_1" onclick="screen.value = eval(screen.value)">
+            </tr><br>
+              <tr>
+                <input type="button" value="9" class="row_1" onclick="screen.value += value">
+                <input type="button" value="8" class="row_1" onclick="screen.value += value">
+                <input type="button" value="7" class="row_1" onclick="screen.value += value">
+                <input type="button" value="+" class="row_1" onclick="screen.value += value">
+            </tr> <br>
+            <tr>
+                <input type="button" value="6" class="row_1" onclick="screen.value += value">
+                <input type="button" value="5" class="row_1" onclick="screen.value += value">
+                <input type="button" value="4" class="row_1" onclick="screen.value += value">
+                <input type="button" value="-" class="row_1" onclick="screen.value += value">
+
+            </tr><br>
+            <tr>
+                <input type="button" value="3" class="row_1" onclick="screen.value += value">
+                <input type="button" value="2" class="row_1" onclick="screen.value += value">
+                <input type="button" value="1" class="row_1" onclick="screen.value += value">
+                <input type="button" value="*" class="row_1" onclick="screen.value += value">
+            </tr>
+            
+
+
+
+           </form>
+        </div>
+    </div>
+</body>
+</html>
